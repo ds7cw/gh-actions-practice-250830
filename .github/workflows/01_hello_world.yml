@@ -20,4 +20,4 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y bsdmainutils
 
       - name: Show calendar
-        run: cal -w -3
+        run: ncal -w
