@@ -16,5 +16,8 @@ jobs:
       - name: List files
         run: ls -l
 
+      - name: Install cal
+        run: sudo apt-get update && sudo apt-get install -y bsdmainutils
+
       - name: Show calendar
         run: cal -w -3
