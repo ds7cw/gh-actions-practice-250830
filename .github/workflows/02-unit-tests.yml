@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - '02-unit-tests/**'
+  workflow_dispatch:
 
 jobs:
   test:
