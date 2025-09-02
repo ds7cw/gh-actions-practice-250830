@@ -19,4 +19,6 @@ jobs:
         run: pip install pytest
 
       - name: Run tests
-        run: pytest 02-unit-tests
+        run: |
+          cd 02-unit-tests
+          pytest
