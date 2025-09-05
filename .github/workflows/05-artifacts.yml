@@ -1,0 +1,20 @@
+name: Generate and Upload Artifact
+
+on:
+  push:
+    - '05-artifacts/**'
+  workflow_dispatch:
+
+jobs:
+  artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run script
+      - run: python 05-artifacts/generate_report.py
+
+      - name: Upload artifact
+      - uses: actions/upload-artifact@v4
+        with:
+          name: report
+          path: report.txt
