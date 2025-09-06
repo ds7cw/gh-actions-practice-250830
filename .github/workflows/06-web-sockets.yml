@@ -1,0 +1,23 @@
+name: Test HTTPS Socket
+
+on:
+  push:
+    paths:
+      - '06-web-sockets/**'
+  workflow_dispatch:
+
+jobs:
+  test-socket:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Run socket test
+        run: |
+          python web_socket.py
