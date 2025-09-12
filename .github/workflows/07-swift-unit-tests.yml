@@ -1,0 +1,34 @@
+name: Swift Unit Tests
+
+on:
+  push:
+    paths:
+      - '07-swift-unit-tests/**'
+  workflow_dispatch:
+
+jobs:
+  test-latest-macos:
+    name: Test on latest macOS
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: 07-swift-unit-tests
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Swift tests
+        run: swift test
+
+  test-older-macos:
+    name: Test on older macOS
+    runs-on: macos-13
+    defaults:
+      run:
+        working-directory: 07-swift-unit-tests
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Swift tests
+        run: swift test
