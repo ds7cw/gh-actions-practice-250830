@@ -7,7 +7,14 @@ let package = Package(
         .library(name: "Algorithms", targets: ["Algorithms"]),
     ],
     targets: [
-        .target(name: "Algorithms"),
-        .testTarget(name: "AlgorithmsTests", dependencies: ["Algorithms"]),
-    ],
+        .target(
+            name: "Algorithms",
+            path: "Sources/Algorithms"
+        ),
+        .testTarget(
+            name: "AlgorithmsTests",
+            dependencies: ["Algorithms"],
+            path: "Tests/AlgorithmsTests"
+        )
+    ]
 )
