@@ -23,4 +23,4 @@ jobs:
       run: pip install requests
 
     - name: Run script
-      run: python multi_request.py
+      run: python multithreading.py
