@@ -23,4 +23,4 @@ jobs:
       run: pip install requests
 
     - name: Run script
-      run: python multithreading.py
+      run: python 09-multithreading/multithreading.py
