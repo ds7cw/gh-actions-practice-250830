@@ -3,8 +3,12 @@ name: OS and Python Matrix Test
 on:
   push:
     branches: [ main ]
+    paths:
+      - '04-matrix-build-os/**'
   pull_request:
     branches: [ main ]
+    paths:
+      - '04-matrix-build-os/**'
   workflow_dispatch:
 
 jobs:
